@@ -4,9 +4,12 @@
     --white-500: #fafafa;
     --primary: rgba(178, 70, 74, 1);
     --black: rgba(0, 0, 0, .8);
+    --black-500: rgba(0, 0, 0, .5);
     --secondary: rgb(254, 240, 222);
     --max-layout-width: 1600px;
     --max-layout-height: 950px;
+    --desktop-columns-default: 40% 1fr;
+    --mobile-columns-default: 1fr;
 }
 
 * {
@@ -18,7 +21,7 @@ body {
 }
 
 main {
-    max-width: var(--max-layout-width);
+    max-width: var(--max-layout-width) !important;
     margin: auto;
 }
 
@@ -27,7 +30,7 @@ main {
     max-width: var(--max-layout-width);
     display: grid;
     grid-template-areas: "section-one-left section-one-right";
-    grid-template-columns: minmax(45%, 600px) 1fr;
+    grid-template-columns: var(--desktop-columns-default);
     height: var(--max-layout-height);
 }
 
@@ -99,7 +102,6 @@ main {
 
 .banner-block .divider {
     height: 50%;
-    background: blue;
     width: 2px;
     margin: auto;
 }
@@ -129,14 +131,13 @@ main {
 }
 
 
-/* section 2 */
+/****************** section 2 ******************/
 .section-two {
     margin: auto;
     max-width: var(--max-layout-width);
     display: grid;
     grid-template-areas: "section-two-left section-two-right";
-    grid-template-columns: minmax(45%, 600px) 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: var(--desktop-columns-default)
 }
 
 .section-two .section-two-left {
@@ -144,6 +145,18 @@ main {
     background-color: var(--secondary);
     display: grid;
     gap: 1rem;
+    position: relative;
+    align-content: center;
+    justify-content: start;
+}
+
+.section-two .section-two-left button {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 28px);
+    width: 164px;
+    padding: 1rem;
+    border-radius: 40px 0 0 40px;
 }
 
 .section-two .section-two-left img {
@@ -168,8 +181,11 @@ main {
     font-weight: 400;
 }
 
+/****************** end session2 ******************/
 
-/* section 3 */
+
+/****************** section 3 ******************/
+
 .popular-food {
     margin: auto;
     max-width: var(--max-layout-width);
@@ -188,6 +204,11 @@ main {
     grid-area: title;
     text-align: center;
     font-weight: 700;
+    font-size: 3.5em;
+}
+
+.popular-food .popular-food--button-wrapper {
+    margin: auto;
 }
 
 .popular-food .chips-list {
@@ -203,7 +224,7 @@ main {
     border-radius: 3rem;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
+    border-radius: 3rem;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
@@ -229,31 +250,46 @@ main {
     position: relative;
 }
 
-.popular-food .foods-list::before {
-    content: "";
+.popular-food .foods-list .arrow-left {
+    grid-area: arrow-left;
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: var(--white-500);
-    top: 0;
+    width: 4em;
+    height: 4em;
+    top: 50;
     left: 0;
-    transform: translate(-100%, 90%);
+    transform: translate(-100%, -100%);
     border-radius: 50%;
     cursor: pointer;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.42);
 }
 
-.popular-food .foods-list::after {
-    content: "";
+.popular-food .foods-list .arrow-right {
+    grid-area: arrow-right;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 4em;
+    height: 4em;
     background-color: var(--white-500);
-    top: 0;
+    top: 50;
     right: 0;
-    transform: translate(100%, 90%);
+    transform: translate(100%, -100%);
     border-radius: 50%;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.42);
 
 }
 
@@ -269,7 +305,7 @@ main {
     padding: 0 2rem;
 }
 
-.popular-food .foods-list .food-item:nth-child(2) {
+.popular-food .foods-list .food-item:nth-child(3) {
     background: var(--white-500);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -282,7 +318,7 @@ main {
     padding: 0 2rem;
 }
 
-.foods-list .food-item:nth-child(2) img {
+.foods-list .food-item:nth-child(3) img {
     height: 12.5rem;
     object-fit: cover;
     margin: 0;
@@ -315,4 +351,121 @@ main {
 
 .food-item p:nth-child(4) {
     grid-area: food-price;
+}
+
+/****************** end section 3 ******************/
+
+
+/****************** section 4 ******************/
+.forth-section {
+    background: var(--white-500);
+}
+
+.forth-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    grid-template-areas: "food-details food-image" "drink-image drink-details";
+}
+
+.forth-section>div {
+    width: 100%;
+    margin: auto;
+}
+
+.forth-section>div>img {
+    height: 70%;
+}
+
+.forth-section .details {
+    display: grid;
+    grid-template-areas: "title" "description" "list";
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.forth-section div:nth-child(1) {
+    grid-area: food-details;
+}
+
+.forth-section div:nth-child(4) {
+    grid-area: drink-details;
+}
+
+
+.forth-section h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.details p {
+    font-size: 1.2rem;
+    color: var(--black-500);
+}
+
+.list {
+    grid-area: list;
+    display: grid;
+    justify-content: left;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    font-size: 1.4rem;
+}
+
+.list p::before {
+    content: "✓";
+    color: var(--white-500);
+    margin-right: 1rem;
+    border-radius: 3rem;
+    padding: 0 .3rem;
+    background-color: var(--primary);
+    font-size: 1rem;
+}
+
+.forth-section .image-wrapper {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: var(--secondary);
+}
+
+.forth-section .image-wrapper:nth-child(2) {
+    grid-area: food-image;
+}
+
+.forth-section .image-wrapper:nth-child(3) {
+    grid-area: drink-image;
+}
+
+
+/* general */
+
+.btn-default {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 400;
+    transition: all 0.3s ease;
+
+
+    background: var(--black);
+    color: var(--white-500);
+}
+
+.override-button {
+    /* border-radius: 40px 0 0 40px; */
+    outline: none;
+    border: none;
+    background: var(--black);
+    color: var(--white-500);
 }
