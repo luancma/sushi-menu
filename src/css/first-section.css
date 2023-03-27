@@ -3,14 +3,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    height: auto;
     text-align: center;
     background-color: var(--white-500);
 }
 
 .section1--content {
-    margin: auto;
-    padding: 0 1em;
+    margin: 3em 1em;
 }
 
 .section1--content h2 {

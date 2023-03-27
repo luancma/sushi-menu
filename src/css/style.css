@@ -271,7 +271,7 @@
     }
 
     .popular-food .popular-food--button-wrapper {
-        margin: auto;
+        margin: 0 auto;
     }
 
     .popular-food .chips-list {
