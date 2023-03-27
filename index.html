@@ -4,25 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-
-    <link rel="stylesheet" href="./src/css/style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- fork-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
-      integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY="
-      crossorigin="anonymous"
-    />
-    <!-- fork-awesome -->
+    <link rel="stylesheet" href="style.css" />
 
     <!-- bootstrap -->
     <link
@@ -42,161 +24,151 @@
       crossorigin="anonymous"
     ></script>
     <!-- end bootstrap -->
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+      integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY="
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
   </head>
   <body>
-    <main>
-      <section class="section-one">
-        <div class="section-one-left"></div>
-        <div class="section-one-right">
-          <div class="text-information">
-            <h2>Feel the taste of Japanese foods.</h2>
+    <div class="container">
+      <div class="section1">
+        <div class="section1--banner"></div>
+        <div class="section1--content">
+          <h2>Feel the taste of Japanese foods.</h2>
+          <p>
+            Feel the taste of the most popular Japanese foods from anywhere and
+            anytime.
+          </p>
+
+          <div class="button-group">
+            <div class="col-12 col-md-4">
+              <button class="c-button">Saber mais</button>
+            </div>
+            <div>
+              <button class="btn btn-link">How to order</button>
+            </div>
+          </div>
+        </div>
+        <div class="section1--bottom">
+          <div class="section1--bottom-texts">
+            <p>24K+</p>
+            <p>Clientes</p>
+          </div>
+          <div class="section1--bottom-feedback">
+            <img src="" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur illum iure modi totam
+            </p>
+          </div>
+        </div>
+      </div>
+      <section class="second-section">
+        <div class="second-section--content">
+          <div class="text-block">
+            <h2>Nossa missão é levar o verdadeiro sabor do Japão para você.</h2>
             <p>
               Feel the taste of the most popular Japanese foods from anywhere
-              and anytime.
+              and anytime. Feel the taste of the most popular Japanese foods
+              from.
             </p>
-
+          </div>
+          <div class="image-block">
+            <div class="image-wrapper">
+              <img src="src/img/sushi.png" alt="" />
+            </div>
+            <div class="image-wrapper">
+              <img src="src/img/tuna.png" alt="" />
+            </div>
+            <button class="c-button">Saiba mais</button>
+          </div>
+        </div>
+      </section>
+      <section class="third-section">
+        <div class="content">
+          <h2>Pratos populares</h2>
+          <div class="chip-list">
+            <div class="chip" data-selected="true">All</div>
+            <div class="chip">Sushi</div>
+            <div class="chip">Sashimi</div>
+            <div class="chip">Temaki</div>
+            <div class="chip">Uramaki</div>
+            <div class="chip">Niguiris</div>
+            <div class="chip">Outros</div>
+          </div>
+          <div class="food-list">
             <div>
-              <button class="btn-default override-button">Fazer pedido</button>
-              <button class="btn override-button">Como pedir</button>
+              <img src="src/img/sushi (8).png" alt="" />
+              <p class="food-name">Sushi 1</p>
+              <div class="food-item--footer">
+                <p><i class="fa fa-star" aria-hidden="true"></i> 5.4</p>
+                <p>0,99</p>
+              </div>
+            </div>
+            <div>
+              <img src="src/img/sushi (2).png" alt="" />
+              <p class="food-name">Sushi 2</p>
+              <div class="food-item--footer">
+                <p><i class="fa fa-star" aria-hidden="true"></i> 5.5</p>
+                <p>1,20</p>
+              </div>
+            </div>
+            <div>
+              <img src="src/img/sushi (4).png" alt="" />
+              <p class="food-name">Sushi 3</p>
+              <div class="food-item--footer">
+                <p><i class="fa fa-star" aria-hidden="true"></i> 5.4</p>
+                <p>1,30</p>
+              </div>
             </div>
           </div>
+          <div class="button-wrapper">
+            <button class="c-button">Ver todos</button>
+          </div>
+        </div>
+      </section>
 
-          <div class="banner-block">
-            <div class="counter">
-              <p><span>24</span>K +</p>
-              <p>
-                <span>Happy</span>
-                <br />
-                <span>Costumers </span>
-              </p>
-            </div>
-            <div class="divider"></div>
-
-            <div class="feedback">
-              <div class="feedback-image"></div>
-              <p>
-                Lorem ipsum dolor sit, amet. Nesciunt modi eos et odit delectus
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-two">
-        <div class="section-two-left">
-          <img src="./src/img/sashimi_2.png" alt="" />
-          <img src="./src/img/tuna.png" alt="" />
-          <button class="nav-button override-button">Ver mais</button>
-        </div>
-        <div class="section-two-right">
-          <p>Our mission is to bring true Japanese flavours to you</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            corrupti harum dignissimos est velit libero sed, corporis quisquam
-          </p>
-        </div>
-      </section>
-      <section class="popular-food">
-        <h2>Popular Foods</h2>
-        <div class="chips-list">
-          <div data-selected="true" class="chip">All</div>
-          <div data-selected="false" class="chip">Sushi</div>
-          <div data-selected="false" class="chip">Ramen</div>
-          <div data-selected="false" class="chip">Udon</div>
-          <div data-selected="false" class="chip">Dabggo</div>
-          <div data-selected="false" class="chip">Other</div>
-        </div>
-        <div class="foods-list">
-          <div class="arrow-left">
-            <i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
-          </div>
-          <div class="food-item">
-            <div class="image-wrapper">
-              <img src="./src/img/sushi (1).png" alt="" />
-            </div>
-            <p>Food Name</p>
-            <p>4.7*</p>
-            <p>R$ 8.00</p>
-          </div>
-          <div class="food-item">
-            <div class="image-wrapper">
-              <img src="./src/img/sushi (2).png" alt="" />
-            </div>
-            <p>Food Name</p>
-            <p>4.7*</p>
-            <p>R$ 8.00</p>
-          </div>
-          <div class="food-item">
-            <div class="image-wrapper">
-              <img src="./src/img/sushi (4).png" alt="" />
-            </div>
-            <p>Food Name</p>
-            <p>4.7*</p>
-            <p>R$ 8.00</p>
-          </div>
-          <div class="arrow-right">
-            <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="popular-food--button-wrapper">
-          <button class="btn-default override-button">Menu completo</button>
-        </div>
-      </section>
       <section class="forth-section">
-        <div class="details">
-          <h2>Food name</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <ul class="list">
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-          </ul>
+        <div class="first-block">
+          <div class="content">
+            <h2>Sushi Japones</h2>
+            <p>Sinta o verdadeiro sabor de sushi</p>
+            <ul>
+              <li class="list-item"><i class="fa fa-check" aria-hidden="true"></i> Maki Sushi</li>
+              <li class="list-item"><i class="fa fa-check" aria-hidden="true"></i> Nigiri Sushi</li>
+              <li class="list-item"><i class="fa fa-check" aria-hidden="true"></i> Oshizushi</li>
+              <li class="list-item"><i class="fa fa-check" aria-hidden="true"></i> Temaki Sushi</li>
+              <li class="list-item"><i class="fa fa-check" aria-hidden="true"></i> Uramaki Sushi</li>
+              <li class="list-item"><i class="fa fa-check" aria-hidden="true"></i> Inari Sushi</li>
+            </ul>
+          </div>
+          <div class="img-wrapper">
+            <img src="src/img/sushi (5).png" alt="" />
+          </div>
         </div>
-        <div class="image-wrapper">
-          <img src="src/img/sushi (7).png" alt="" />
-        </div>
-        <div class="image-wrapper">
-          <img src="src/img/sake.png" alt="" />
-        </div>
-        <div class="details">
-          <h2>Food name</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <ul class="list">
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-            <li>
-              <p>text</p>
-            </li>
-          </ul>
+
+        <div class="first-block">
+          <div class="content">
+            <h2>Bebidas Japonesas</h2>
+            <p>Sinta o sabor das nossas bedidas</p>
+            <ul>
+              <li class="list-item"> <i class="fa fa-check" aria-hidden="true"></i> Orucha </li>
+              <li class="list-item"> <i class="fa fa-check" aria-hidden="true"></i> Ofukucha</li>
+              <li class="list-item"> <i class="fa fa-check" aria-hidden="true"></i> Sakura Tea</li>
+              <li class="list-item"> <i class="fa fa-check" aria-hidden="true"></i> Kombu-cha</li>
+              <li class="list-item"> <i class="fa fa-check" aria-hidden="true"></i> Aojiru</li>
+              <li class="list-item"> <i class="fa fa-check" aria-hidden="true"></i> Mugicha</li>
+            </ul>
+          </div>
+          <div class="img-wrapper">
+            <img src="src/img/sake.png" alt="" />
+          </div>
         </div>
       </section>
-    </main>
+    </div>
   </body>
-</html>
+</html><li class="list-item"

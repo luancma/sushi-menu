@@ -1,5 +1,7 @@
 @import url("./src/css/first-section.css");
 @import url("./src/css/second-section.css");
+@import url("./src/css/third-section.css");
+@import url("./src/css/forth-section.css");
 
 :root {
     --white-500: #fafafa;
@@ -16,6 +18,12 @@
 html {
     max-width: 100vw !important;
     scroll-behavior: smooth;
+    height: 100%;
+    background-color: var(--black-500) !important;
+}
+
+body {
+    background-color: var(--black-500) !important;
 }
 
 .container {
